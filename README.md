@@ -43,3 +43,23 @@ Designed to support civil engineers and GIS analysts in tackling real-world infr
 │       └── map.js         # Leaflet initialization & layer control
 └── data/
     └── sample_flood_zones.geojson
+
+
+
+
+## 🚀 Roadmap & Enhancements
+
+### ✅ Completed
+- [x] GeoDjango + PostGIS backend
+- [x] Leaflet 2D visualization
+- [x] Docker containerization
+
+### 🔄 In Progress
+- [ ] **HEC-RAS Integration**: Parsing XML outputs and storing water surface profiles
+- [ ] **MQTT Sensor Network**: Real-time water level monitoring from IoT devices
+- [ ] **3D Visualization**: CesiumJS terrain-aware flood modeling
+
+### 📅 Planned
+- [ ] **Vector Tile Generation**: Optimizing for large-scale datasets
+- [ ] **Machine Learning**: Predictive flood modeling using historical data
+- [ ] **Mobile App**: React Native companion for field engineers
