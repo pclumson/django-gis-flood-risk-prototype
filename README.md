@@ -26,23 +26,55 @@ Designed to support civil engineers and GIS analysts in tackling real-world infr
 
 ## 📂 Project Structure
 
-```text
-├── manage.py
-├── requirements.txt
+```text.
+├── data
+│   ├── sample_flodd_zone.geojson
+│   └── sample_sensor_readings.json
 ├── docker-compose.yml
-├── .dockerignore
-├── README.md
-├── flood_risk_app/
-│   ├── models.py          # GeoModels (FloodZones, Infrastructure)
-│   ├── views.py           # GeoJSON views & Spatial queries
-│   ├── serializers.py     # DRF Serializers with geometry fields
-│   ├── urls.py
-│   └── tests.py           # Unit tests for spatial logic
-├── static/
-│   └── js/
-│       └── map.js         # Leaflet initialization & layer control
-└── data/
-    └── sample_flood_zones.geojson
+├── Dockerfile
+├── flood_risk_app
+│   ├── admin.py
+│   ├── apps.py
+│   ├── consumers.py
+│   ├── __init__.py
+│   ├── kinesis_consumer.py
+│   ├── management
+│   │   └── commands
+│   │       ├── consumer_sensors.py
+│   │       └── load_flood_zones.py
+│   ├── migrations
+│   │   └── __init__.py
+│   ├── models.py
+│   ├── mttq_consumer.py
+│   ├── routing.py
+│   ├── serializers.py
+│   ├── tests.py
+│   ├── urls.py
+│   └── views.py
+├── manage.py
+├── poetry.lock
+├── pyproject.toml
+├── requirements.txt
+├── services
+│   └── hecras_parser.py
+├── simulate_sensor.py
+├── static
+│   ├── css
+│   ├── images
+│   └── js
+│       └── map.js
+├── templates
+│   └── map.html
+└── water_gis
+    ├── asgi.py
+    ├── __init__.py
+    ├── __pycache__
+    │   ├── __init__.cpython-314.pyc
+    │   └── settings.cpython-314.pyc
+    ├── settings.py
+    ├── urls.py
+    └── wsgi.py
+
 
 
 
