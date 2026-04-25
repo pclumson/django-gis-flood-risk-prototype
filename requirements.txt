@@ -1,8 +1,47 @@
+# --- Core Django & GIS ---
 Django>=5.0
-psycopg2-binary>=2.9
-django-environ>=0.11
-# GIS specific libraries
-geoip2>=4.0
-# Data processing (optional but good for the demo)
-pandas>=2.0
-numpy>=1.24
+django-cors-headers>=4.3.0
+django-environ>=0.11.2
+psycopg2-binary>=2.9.9
+# GIS Specific
+GDAL==3.8.4  # Match your OS GDAL version usually, or use system package
+geoip2>=4.7.0
+shapely>=2.0.3
+fiona>=1.9.5
+rasterio>=1.3.9
+geopandas>=0.14.2
+
+# --- HEC-RAS & Data Processing ---
+pandas>=2.2.0
+numpy>=1.26.4
+openpyxl>=3.1.2
+# Note: hec-ras-python is often installed via pip or system.
+# If not on PyPI, you may need to install from source or use a wrapper.
+# hec-ras-python>=0.1.0
+
+# --- Real-Time & WebSockets (MQTT) ---
+channels>=4.0.0
+daphne>=4.0.0
+channels-redis>=4.2.0
+paho-mqtt>=1.6.1
+redis>=5.0.1
+
+# --- Cloud & DevOps ---
+boto3>=1.34.0
+aws-xray-sdk>=2.12.0
+gunicorn>=21.2.0
+uvicorn>=0.27.0
+celery>=5.3.4
+redis>=5.0.1
+
+# --- 3D & Visualization Helpers ---
+# (Frontend deps are in package.json, but these help backend tile gen)
+tippecanoe>=2.56.0  # Usually system installed, but listed for reference
+pillow>=10.2.0
+
+# --- Utilities ---
+python-dotenv>=1.0.0
+requests>=2.31.0
+pytest>=7.4.4
+pytest-django>=4.7.0
+
